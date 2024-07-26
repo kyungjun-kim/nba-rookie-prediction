@@ -14,7 +14,7 @@ def predict():
     season = request.form['season']
     trained_model = model.train_model()
     predictions = model.predict_rookie_of_the_year(trained_model, season)
-    return render_template('result.html', season=season, predictions=predictions)
+    return render_template('result.html', season=season, predictions=predictions.to_dict(orient='records'))
 
 if __name__ == '__main__':
     app.run(debug=True)
