@@ -25,10 +25,10 @@ jobs:
         pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Freeze Flask app
+    - name: Generate static files
       run: |
         source venv/bin/activate
-        python freeze.py
+        python generate_static.py
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
