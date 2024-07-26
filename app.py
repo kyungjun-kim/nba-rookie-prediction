@@ -1,9 +1,9 @@
 from flask import Flask, render_template, request
-from flask_static_digest import FlaskStaticDigest
+from flask_frozen import Freezer
 import model
 
 app = Flask(__name__)
-flask_static_digest = FlaskStaticDigest(app)
+freezer = Freezer(app)
 
 @app.route('/')
 def index():

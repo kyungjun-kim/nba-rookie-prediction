@@ -28,7 +28,7 @@ jobs:
     - name: Generate static files
       run: |
         source venv/bin/activate
-        python generate_static.py
+        python freeze.py
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
