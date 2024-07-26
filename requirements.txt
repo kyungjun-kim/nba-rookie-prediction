@@ -4,4 +4,4 @@ scikit-learn
 nba_api
 pyspark
 matplotlib
-flask-frozen
+flask_static_digest
